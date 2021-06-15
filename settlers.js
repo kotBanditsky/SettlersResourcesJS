@@ -97,54 +97,103 @@ function counter(int) {
 // delete resource command
 
         case 6:
-            if (counterAction > 0 && counterRock > 0 ) {
-                counterRock--;
-                counterAction--;
-                actionNumber.textContent = counterAction;
-                rockNumber.textContent = counterRock;
-                document.getElementById("displaytext").innerHTML  +=  "-1 action & rock point\n";
-                break;
+            if (block.checked) {
+                if (counterAction > 0 && counterRock > 0 ) {
+                    counterRock--;
+                    counterAction--;
+                    actionNumber.textContent = counterAction;
+                    rockNumber.textContent = counterRock;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & rock point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             } else {
-                console.log("nope");
-                break;
+                if (counterAction > 0 && counterRock > 0 ) {
+                    counterRock--;
+                    rockNumber.textContent = counterRock;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & rock point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             }
         case 7:
-            if (counterAction > 0  && counterTomato > 0 ) {
-                counterTomato--;
-                counterAction--;
-                actionNumber.textContent = counterAction;
-                tomatoNumber.textContent = counterTomato;
-                document.getElementById("displaytext").innerHTML  +=  "-1 action & tomato point\n";
-                break;
-            } else {
-                console.log("nope");
-                break;
+            if (block.checked) {
+                if (counterAction > 0  && counterTomato > 0 ) {
+                    counterTomato--;
+                    counterAction--;
+                    actionNumber.textContent = counterAction;
+                    tomatoNumber.textContent = counterTomato;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & tomato point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
+            } 
+            else {
+                if (counterAction > 0  && counterTomato > 0 ) {
+                    counterTomato--;
+                    tomatoNumber.textContent = counterTomato;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & tomato point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             }
         case 8:
-            if (counterAction > 0 && counterWood > 0 ) {
-                counterWood--;
-                counterAction--;
-                actionNumber.textContent = counterAction;
-                woodNumber.textContent = counterWood;
-                document.getElementById("displaytext").innerHTML  +=  "-1 action & wood point\n";
-                break;
+            if (block.checked) {
+                if (counterAction > 0 && counterWood > 0 ) {
+                    counterWood--;
+                    counterAction--;
+                    actionNumber.textContent = counterAction;
+                    woodNumber.textContent = counterWood;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & wood point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             } else {
-                console.log("nope");
-                break;
+                if (counterAction > 0 && counterWood > 0 ) {
+                    counterWood--;
+                    woodNumber.textContent = counterWood;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & wood point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             }
         case 9:
-            if (counterAction > 0 && counterCoin > 0 ) {
-                counterCoin--;
-                counterAction--;
-                actionNumber.textContent = counterAction;
-                coinNumber.textContent = counterCoin;
-                document.getElementById("displaytext").innerHTML  +=  "-1 action & coin point\n";
-                break;
+            if (block.checked) {
+                if (counterAction > 0 && counterCoin > 0 ) {
+                    counterCoin--;
+                    counterAction--;
+                    actionNumber.textContent = counterAction;
+                    coinNumber.textContent = counterCoin;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & coin point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             } else {
-                console.log("nope");
-                break;
+                if (counterAction > 0 && counterCoin > 0 ) {
+                    counterCoin--;
+                    coinNumber.textContent = counterCoin;
+                    document.getElementById("displaytext").innerHTML  +=  "-1 action & coin point\n";
+                    break;
+                } else {
+                    console.log("nope");
+                    break;
+                }
             }
-
+            
 // delete action command
 
         case 10:
@@ -218,6 +267,10 @@ block.addEventListener("click", blockForm);
 
 function blockForm() {
     if (block.checked) {
+
+        const actionFix = actionNumber.textContent;
+        actionNumber.textContent = actionFix;
+
         action.disabled = 1
         rock.disabled = 1
         coin.disabled = 1
