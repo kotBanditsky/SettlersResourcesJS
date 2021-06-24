@@ -1,5 +1,5 @@
 # SettlersResourcesJS
-Imperial Settlers: Roll and Write Resources Counter on JS
+Imperial Settlers: Roll and Write Bord Game Resources Checker v1 on JavaScript and Tailwind
 
 Site: https://kotbanditsky.github.io/SettlersResourcesJS/
 
